@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8-assignment-frontend
+spec:
+  selector:
+    matchLabels:
+      app: k8-assignment-frontend
+  template:
+    metadata:
+      labels:
+        app: k8-assignment-frontend
+    spec:
+      containers:
+      - name: k8-assignment-frontend
+        image: docker.io/gurbakshkaur/k8-asign-frontend:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: BACKEND_URL
+          value: http://k8-assignment-backend.k8-hw.svc.cluster.local
+
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8-assignment-frontend
+spec:
+  selector:
+    app: k8-assignment-frontend
+  ports:
+  - port: 80
+    targetPort: 4000
