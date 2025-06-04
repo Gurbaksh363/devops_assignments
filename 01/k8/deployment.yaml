@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ferir
+  labels:
+    desc: ferir-deployment   # must be separated by _ or -
+spec:
+  selector:
+    matchLabels:
+      app: ferir    # 1 should be same
+  replicas: 3
+  template:                 #pod
+    metadata:
+      labels:
+        app: ferir   # 1 should be same
+    spec:
+      containers:
+      - name: ferir-main         # container img
+        image: docker.io/gurbakshkaur/ferir:latest  # docker.io or aws.io or azure.io 
+        ports:
+        - containerPort: 3000
+        env:
+        - name: girl
+          value: good
+        - name: PORT
+          value: "3000"
+
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: #222;
+      color: blueviolet;
+      font-size: 20px;
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p>Hello this is more text</p>
+  <p>Envioronment Variables:</p>
+  <ul>
+    {% for key, value in env.items()%}
+    <li>{{key}}=>{{value}}</li>
+    {% endfor %}
+  </ul>
+  
+</body>
+</html>
