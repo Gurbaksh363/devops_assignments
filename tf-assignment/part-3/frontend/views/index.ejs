@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 10px;
+        font-family:  Verdana, Geneva, Tahoma, sans-serif;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        width: 100vw;
+        text-align: center;
+        background-color: rgb(241, 191, 147);
+        color: #222;
+        margin: 0;
+        padding: 20px;
+        background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80");
+        background-size: cover, 200px 200px;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center, bottom right;
+      }
+
+      input {
+        padding: 12px 30px;
+        border-radius: 25px;
+        border: 2px solid #222;
+        font-size: 1em;
+        outline: none;
+        transition: box-shadow 0.3s ease;
+      }
+
+      input:focus {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+      }
+
+      button {
+        padding: 10px 25px;
+        border-radius: 25px;
+        border: none;
+        background-color: #2e2e3a;
+        color: white;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease, transform 0.2s;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: #1f1f29;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sign up</h1>
+    <form action="/signup" method="post">
+      <input type="text" name="firstname" placeholder="Enter firstname" /><br />
+      <input type="text" name="lastname" placeholder="Enter lastname" /><br />
+      <input type="email" name="email" placeholder="Enter email" /><br />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter password"
+      /><br />
+      <button>Sign up</button>
+    </form>
+  </body>
+</html>
