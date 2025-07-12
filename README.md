@@ -1,69 +1,69 @@
-# DevOps Assignments
+# 🚀 DevOps Assignments
 
 This repository contains various DevOps assignments demonstrating different technologies and practices including containerization, Kubernetes orchestration, CI/CD pipelines, and Infrastructure as Code (IaC) with Terraform.
 
-## Project Structure
+## 📁 Project Structure
 
-### 01/ - Basic Flask App with Docker & Kubernetes
+### 1️⃣ docker_k8_assignment - Basic Flask App with Docker & Kubernetes 🐍
 A simple Flask web application that displays environment variables with Docker containerization and Kubernetes deployment.
 
-**What it demonstrates:**
-- Basic Flask web application
-- Docker containerization with Alpine Linux
-- Kubernetes deployment and service configuration
-- Environment variable handling in containers
+**What it demonstrates:** ✨
+- 🌐 Basic Flask web application
+- 🐳 Docker containerization with Alpine Linux
+- ☸️ Kubernetes deployment and service configuration
+- 🔧 Environment variable handling in containers
 
-**Key files:**
+**Key files:** 📂
 - `app.py` - Flask application that renders environment variables
 - `Dockerfile` - Multi-stage Docker build with Python Alpine
 - `k8/deployment.yaml` - Kubernetes deployment with 3 replicas
 - `k8/service.yaml` - Kubernetes service configuration
 
 
-### cicd-assignment/ - Full-Stack Application with Backend/Frontend
-A complete web application with Node.js frontend and Python Flask backend, designed for CI/CD pipeline implementation.
+### 2️⃣ k8_assignment - Kubernetes Orchestration ☸️
+Advanced Kubernetes deployment with proper container orchestration for microservices architecture.
 
-**What it demonstrates:**
-- Microservices architecture (frontend/backend separation)
-- RESTful API communication
-- MongoDB integration
-- Form handling and data persistence
+**What it demonstrates:** ✨
+- 🎯 Container orchestration with Kubernetes
+- 🔍 Service discovery between microservices
+- ⚙️ Environment-specific configuration
+- 📦 Multi-container application deployment
 
-**Components:**
-- **Backend** (`backend/`): Flask API with MongoDB connection for user registration
-- **Frontend** (`frontend/`): Express.js server with EJS templating for signup forms
-
-### k8_assignment/ - Kubernetes Orchestration
-Similar to cicd-assignment but optimized for Kubernetes deployment with proper container orchestration.
-
-**What it demonstrates:**
-- Container orchestration with Kubernetes
-- Service discovery between microservices
-- Environment-specific configuration
-- Multi-container application deployment
-
-**Components:**
+**Components:** 🧩
 - **Backend**: Flask API with Dockerfile
 - **Frontend**: Node.js app with Dockerfile
 - **k8/**: Kubernetes manifests for both services with proper networking
 
-### tf-assignment/ - Terraform Infrastructure as Code
+### 3️⃣ tf-assignment - Terraform Infrastructure as Code 🏗️
 Infrastructure automation using Terraform across multiple cloud scenarios.
 
-**What it demonstrates:**
-- Infrastructure as Code (IaC) practices
-- Multi-part infrastructure deployment
-- Cloud-init for server configuration
-- Load balancing and container orchestration
+**What it demonstrates:** ✨
+- 📋 Infrastructure as Code (IaC) practices
+- 🔄 Multi-part infrastructure deployment
+- ☁️ Cloud-init for server configuration
+- ⚖️ Load balancing and container orchestration
 
-**Parts:**
+**Parts:** 📦
 - **part-1/**: Basic infrastructure with cloud-init setup
 - **part-2/**: Advanced infrastructure with separate backend/frontend initialization
 - **part-3/**: Complete AWS infrastructure with ALB, ECR, ECS, and VPC
 
-## Getting Started
+### 4️⃣ cicd-assignment - Full-Stack Application with Backend/Frontend 🔄
+A complete web application with Node.js frontend and Python Flask backend, designed for CI/CD pipeline implementation.
 
-### Prerequisites
+**What it demonstrates:** ✨
+- 🏗️ Microservices architecture (frontend/backend separation)
+- 🔗 RESTful API communication
+- 🍃 MongoDB integration
+- 📝 Form handling and data persistence
+
+**Components:** 🧩
+- **Backend** (`backend/`): Flask API with MongoDB connection for user registration
+- **Frontend** (`frontend/`): Express.js server with EJS templating for signup forms
+
+## 🚀 Getting Started
+
+### Prerequisites 📋
 - Docker
 - Kubernetes (kubectl)
 - Terraform
@@ -73,14 +73,29 @@ Infrastructure automation using Terraform across multiple cloud scenarios.
 
 ### Running Individual Projects
 
-#### 01/ - Basic Flask App
+#### 1️⃣ docker_k8_assignment/ - Basic Flask App 🐍
 ```bash
-cd 01/
+cd docker_k8_assignment/
 docker build -t flask-app .
 docker run -p 8000:8000 flask-app
 ```
 
-#### cicd-assignment/ - Full-Stack App
+#### 2️⃣ k8_assignment/ - Kubernetes Deployment ☸️
+```bash
+cd k8_assignment/k8/
+kubectl apply -f backend.yaml
+kubectl apply -f frontend.yaml
+```
+
+#### 3️⃣ tf-assignment/ - Terraform Infrastructure 🏗️
+```bash
+cd tf-assignment/part-1/
+terraform init
+terraform plan
+terraform apply
+```
+
+#### 4️⃣ cicd-assignment/ - Full-Stack App 🔄
 ```bash
 # Backend
 cd cicd-assignment/backend/
@@ -91,21 +106,6 @@ python app.py
 cd cicd-assignment/frontend/
 npm install
 npm start
-```
-
-#### k8_assignment/ - Kubernetes Deployment
-```bash
-cd k8_assignment/k8/
-kubectl apply -f backend.yaml
-kubectl apply -f frontend.yaml
-```
-
-#### tf-assignment/ - Terraform Infrastructure
-```bash
-cd tf-assignment/part-1/
-terraform init
-terraform plan
-terraform apply
 ```
 
 ## Technologies Used
